@@ -1,0 +1,110 @@
+CSCI 2021 Race Results Log
+Commands:
+  create <name>:            creates a new log with specified name
+  log:                      shows the name of the active results log
+  add <name> <age> <time>:  adds a new participant
+  lookup <name>:            searches for a race participant by name
+  clear:                    resets current results log
+  print:                    shows all participants in active log
+  write_text:               saves results log to text file
+  read_text <file_name>:    loads results log from text file
+  write_bin:                saves results log to binary file
+  read_bin <file_name>:     loads results log from binary file
+  exit:                     exits the program
+results> create WesternStates
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> print
+WesternStates Results
+Name: JP
+Age: 29
+Time: 17:07:25
+Name: Ry
+Age: 38
+Time: 18:38:13
+Name: Spyridon
+Age: 29
+Time: 21:21:55
+Name: Jacquie
+Age: 38
+Time: 21:24:55
+Name: Lucie
+Age: 29
+Time: 23:16:51
+results> write_text
+Results log successfully written to WesternStates.txt
+results> create PreaknessStakes
+Error: You already have an active results log.
+You can remove it with the 'clear' command
+results> clear
+results> create PreaknessStakes
+results> add Secretariat 4 0:02:31
+results> add Justify 4 0:02:33
+results> add Codex 3 0:02:44
+results> add Affirmed 4 0:02:40
+results> add Victorian 4 0:02:50
+results> print
+PreaknessStakes Results
+Name: Secretariat
+Age: 4
+Time: 0:02:31
+Name: Victorian
+Age: 4
+Time: 0:02:50
+Name: Affirmed
+Age: 4
+Time: 0:02:40
+Name: Justify
+Age: 4
+Time: 0:02:33
+Name: Codex
+Age: 3
+Time: 0:02:44
+results> write_bin
+Results log successfully written to PreaknessStakes.bin
+results> clear
+results> read_text WesternStates.txt
+Results log loaded from text file
+results> print
+WesternStates Results
+Name: JP
+Age: 29
+Time: 17:07:25
+Name: Ry
+Age: 38
+Time: 18:38:13
+Name: Spyridon
+Age: 29
+Time: 21:21:55
+Name: Jacquie
+Age: 38
+Time: 21:24:55
+Name: Lucie
+Age: 29
+Time: 23:16:51
+results> clear
+results> read_bin PreaknessStakes.bin
+Results log loaded from binary file
+results> log
+PreaknessStakes
+results> print
+PreaknessStakes Results
+Name: Secretariat
+Age: 4
+Time: 0:02:31
+Name: Victorian
+Age: 4
+Time: 0:02:50
+Name: Affirmed
+Age: 4
+Time: 0:02:40
+Name: Justify
+Age: 4
+Time: 0:02:33
+Name: Codex
+Age: 3
+Time: 0:02:44
+results> exit

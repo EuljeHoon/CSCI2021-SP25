@@ -1,0 +1,42 @@
+CSCI 2021 Race Results Log
+Commands:
+  create <name>:            creates a new log with specified name
+  log:                      shows the name of the active results log
+  add <name> <age> <time>:  adds a new participant
+  lookup <name>:            searches for a race participant by name
+  clear:                    resets current results log
+  print:                    shows all participants in active log
+  write_text:               saves results log to text file
+  read_text <file_name>:    loads results log from text file
+  write_bin:                saves results log to binary file
+  read_bin <file_name>:     loads results log from binary file
+  exit:                     exits the program
+results> create Leadville100 
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> clear
+results> create Leadville100 
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> clear
+results> create Leadville100 
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> clear
+results> create Leadville100 
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> clear
+results> exit

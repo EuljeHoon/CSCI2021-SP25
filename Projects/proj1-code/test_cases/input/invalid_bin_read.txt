@@ -1,0 +1,3 @@
+results> create MonacoGrandPrix
+results> read_bin BelmontStakes.bin
+results> exit

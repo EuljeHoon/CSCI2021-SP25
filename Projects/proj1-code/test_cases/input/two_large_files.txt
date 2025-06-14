@@ -1,0 +1,6 @@
+results> read_text RubiksCubeChallenge.txt
+results> print
+results> clear
+results> read_bin Pogopalooza.bin
+results> print
+results> exit

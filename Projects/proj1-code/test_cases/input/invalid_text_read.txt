@@ -1,0 +1,4 @@
+results> create WesternStates
+results> log
+results> read_text MonacoGrandPrix.txt
+results> exit

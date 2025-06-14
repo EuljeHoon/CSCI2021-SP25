@@ -1,0 +1,3 @@
+results> print
+results> log
+results> exit

@@ -1,0 +1,4 @@
+results> create Goldy5K
+results> add Pre 22 0:13:09
+results> print
+results> exit

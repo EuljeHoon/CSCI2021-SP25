@@ -1,0 +1,7 @@
+================================================================================================================================================================================================================
+== Test 1: Quiz: QUESTIONS.txt
+== Determines if the answers in QUESTIONS.txt are correct
+Running test...
+Expected output is in file 'test_results/raw/lab_04-1-expected.tmp'
+Actual output is in file 'test_results/raw/lab_04-1-actual.tmp'
+Test PASSED

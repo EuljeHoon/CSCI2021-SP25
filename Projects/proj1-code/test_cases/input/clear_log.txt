@@ -1,0 +1,4 @@
+results> create WesternStates
+results> clear
+results> log
+results> exit

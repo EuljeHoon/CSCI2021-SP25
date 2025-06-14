@@ -1,0 +1,2 @@
+results> read_text non_existent.txt
+results> exit

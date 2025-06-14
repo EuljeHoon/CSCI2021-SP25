@@ -1,0 +1,8 @@
+results> create MonacoGrandPrix
+results> add Charles 26 2:23:15
+results> add Lewis 38 2:23:30 
+results> add Lando 28 2:23:24
+results> add Yuki 23 2:25:03
+results> add Sergio 31 0:00:47
+results> print
+results> exit

@@ -1,0 +1,7 @@
+results> create GoldysRun
+results> add Kelvin 24 2:00:32
+results> add Paula 40 2:12:03
+results> add Allyson 27 0:00:22
+results> add Alan 27 0:03:47
+results> print
+results> exit

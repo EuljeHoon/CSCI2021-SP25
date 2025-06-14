@@ -1,0 +1,4 @@
+results> read_text RubiksCubeChallenge.txt
+results> log
+results> print
+results> exit

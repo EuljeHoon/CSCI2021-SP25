@@ -1,0 +1,6 @@
+results> read_bin Pogopalooza.bin
+results> write_text
+results> clear
+results> read_text Pogopalooza.txt
+results> print
+results> exit

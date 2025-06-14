@@ -1,0 +1,2 @@
+results> create Goldy5K
+results> exit

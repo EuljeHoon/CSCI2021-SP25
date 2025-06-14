@@ -1,0 +1,4 @@
+results> create MonacoGrandPrix    
+results> add Charles 26 2:23:15
+results> lookup Charles
+results> exit

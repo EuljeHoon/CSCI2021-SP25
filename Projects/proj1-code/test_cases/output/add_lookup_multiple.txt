@@ -1,0 +1,37 @@
+CSCI 2021 Race Results Log
+Commands:
+  create <name>:            creates a new log with specified name
+  log:                      shows the name of the active results log
+  add <name> <age> <time>:  adds a new participant
+  lookup <name>:            searches for a race participant by name
+  clear:                    resets current results log
+  print:                    shows all participants in active log
+  write_text:               saves results log to text file
+  read_text <file_name>:    loads results log from text file
+  write_bin:                saves results log to binary file
+  read_bin <file_name>:     loads results log from binary file
+  exit:                     exits the program
+results> create MonacoGrandPrix
+results> add Charles 26 2:23:15
+results> add Lewis 38 2:23:30 
+results> add Lando 28 2:23:24
+results> add Yuki 23 2:25:03
+results> add Sergio 31 0:00:47
+results> print
+MonacoGrandPrix Results
+Name: Lewis
+Age: 38
+Time: 2:23:30
+Name: Lando
+Age: 28
+Time: 2:23:24
+Name: Yuki
+Age: 23
+Time: 2:25:03
+Name: Sergio
+Age: 31
+Time: 0:00:47
+Name: Charles
+Age: 26
+Time: 2:23:15
+results> exit

@@ -1,0 +1,33 @@
+CSCI 2021 Race Results Log
+Commands:
+  create <name>:            creates a new log with specified name
+  log:                      shows the name of the active results log
+  add <name> <age> <time>:  adds a new participant
+  lookup <name>:            searches for a race participant by name
+  clear:                    resets current results log
+  print:                    shows all participants in active log
+  write_text:               saves results log to text file
+  read_text <file_name>:    loads results log from text file
+  write_bin:                saves results log to binary file
+  read_bin <file_name>:     loads results log from binary file
+  exit:                     exits the program
+results> create GoldysRun
+results> add Kelvin 24 2:00:32
+results> add Paula 40 2:12:03
+results> add Allyson 27 0:00:22
+results> add Alan 27 0:03:47
+results> print
+GoldysRun Results
+Name: Kelvin
+Age: 24
+Time: 2:00:32
+Name: Alan
+Age: 27
+Time: 0:03:47
+Name: Paula
+Age: 40
+Time: 2:12:03
+Name: Allyson
+Age: 27
+Time: 0:00:22
+results> exit

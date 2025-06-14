@@ -1,0 +1,19 @@
+CSCI 2021 Race Results Log
+Commands:
+  create <name>:            creates a new log with specified name
+  log:                      shows the name of the active results log
+  add <name> <age> <time>:  adds a new participant
+  lookup <name>:            searches for a race participant by name
+  clear:                    resets current results log
+  print:                    shows all participants in active log
+  write_text:               saves results log to text file
+  read_text <file_name>:    loads results log from text file
+  write_bin:                saves results log to binary file
+  read_bin <file_name>:     loads results log from binary file
+  exit:                     exits the program
+results> print
+Error: You must create or load a results log first
+results> create Goldy5K
+results> print
+Goldy5K Results
+results> exit

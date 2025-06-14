@@ -1,0 +1,2 @@
+results> lookup Eliud
+results> exit

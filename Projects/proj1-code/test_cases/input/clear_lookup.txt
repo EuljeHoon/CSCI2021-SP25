@@ -1,0 +1,5 @@
+results> create WesternStates
+results> clear
+results> lookup Eliud
+results> lookup Paula
+results> exit

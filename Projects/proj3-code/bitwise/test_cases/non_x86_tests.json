@@ -1,0 +1,90 @@
+{
+    "name": "Project 3 Bitwise",
+    "timeout": 10,
+    "tests": [
+        {
+            "name": "isZero",
+            "description": "Tests the solution to the isZero puzzle",
+            "command": "qemu-x86_64 ./btest isZero",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 1
+        },
+        {
+            "name": "bitNor",
+            "description": "Tests the solution to the bitNor puzzle",
+            "command": "qemu-x86_64 ./btest bitNor",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 1
+        },
+        {
+            "name": "leastBitPos",
+            "description": "Tests the solution to the leastBitPos puzzle",
+            "command": "qemu-x86_64 ./btest leastBitPos",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 2
+        },
+        {
+            "name": "copyLSB",
+            "description": "Tests the solution to the copyLSB puzzle",
+            "command": "qemu-x86_64 ./btest copyLSB",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 2
+        },
+        {
+            "name": "distinctNegation",
+            "description": "Tests the solution to the distinctNegation puzzle",
+            "command": "qemu-x86_64 ./btest distinctNegation",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 2
+        },
+        {
+            "name": "floatAbsVal",
+            "description": "Tests the solution to the floatAbsVal puzzle",
+            "command": "qemu-x86_64 ./btest floatAbsVal",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 2
+        },
+        {
+            "name": "floatIsLess",
+            "description": "Tests the solution to the floatIsLess puzzle",
+            "command": "qemu-x86_64 ./btest floatIsLess",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 3
+        },
+        {
+            "name": "isAsciiDigit",
+            "description": "Tests the solution to the isAsciiDigit puzzle",
+            "command": "qemu-x86_64 ./btest isAsciiDigit",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 3
+        },
+        {
+            "name": "addOK",
+            "description": "Tests the solution to the addOK puzzle",
+            "command": "qemu-x86_64 ./btest addOK",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 3
+        },
+        {
+            "name": "isGreater",
+            "description": "Tests the solution to the isGreater puzzle",
+            "command": "qemu-x86_64 ./btest isGreater",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 3
+        },
+        {
+            "name": "floatFloat2Int",
+            "description": "Tests the solution to the floatFloat2Int puzzle",
+            "command": "qemu-x86_64 ./btest floatFloat2Int",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 4
+        },
+        {
+            "name": "absVal",
+            "description": "Tests the solution to the absVal puzzle",
+            "command": "qemu-x86_64 ./btest absVal",
+            "output_file": "test_cases/output/empty.txt",
+            "points": 4
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+results> print
+results> create Goldy5K
+results> print
+results> exit

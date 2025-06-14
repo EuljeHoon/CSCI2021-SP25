@@ -1,0 +1,174 @@
+                           __________________
+
+                            LAB 11 QUESTIONS
+                           __________________
+
+Lab Instructions
+================
+
+  Follow the instructions below to experiment with topics related to
+  this lab.
+  - For sections marked QUIZ, fill in an (X) for the appropriate
+    response in this file. Use the command 'make test-quiz' to see if
+    all of your answers are correct.
+  - For sections marked CODE, complete the code indicated. Use the
+    command 'make test-code' to check if your code is complete.
+  - DO NOT CHANGE any parts of this file except the QUIZ sections as it
+    may interfere with the tests otherwise.
+  - If your 'QUESTIONS.txt' file seems corrupted, restore it by copying
+    over the 'QUESTIONS.txt.bak' backup file.
+  - When you complete the exercises, check your answers with 'make test'
+    and if all is well, create a zip file with 'make zip' and upload it
+    to Gradescope. Ensure that the Autograder there reflects your local
+    results.
+  - IF YOU WORK IN A GROUP only one member needs to submit and then add
+    the names of their group.
+
+
+QUIZ: my_lib.c
+==============
+
+  First, review the 'my_lib.c' file. This demonstrates a useful technique
+  called library interpositioning. We write *our own* definitions of library
+  functions like 'malloc()' and 'free()' and set up a program to call our
+  custom functions rather than the standard versions. This is all possible
+  without changing any of the program's source code, which still calls
+  'malloc()' or 'free()' in the usual way but ends up dispatching to our code.
+
+  Take a look at the 'malloc()' function in this file.
+
+  Which function is used to obtain a pointer to the normal, standard C
+  library version of 'malloc()'?
+  - ( ) 'liblookup()'
+  - ( ) 'dlsym()'
+  - ( ) 'libsym()'
+  - ( ) 'malloc()'
+
+  The custom version of 'malloc()' mostly acts as a wrapper around the
+  original library version. What does it do that the library version does
+  not?
+  - ( ) It checks if the 'size' argument is valid.
+  - ( ) It checks if there is enough memory remaining on the heap to
+        accommodate the new memory allocation.
+  - ( ) It counts how many total bytes have been allocated over the
+        lifetime of the program.
+  - ( ) It counts how many total calls to 'malloc()' have been made
+        over the lifetime of the program.
+
+  What is the role of the 'atexit()' function near the beginning of the
+  code for 'malloc()'?
+  - ( ) It registers the 'print_mem_info()' function to be executed when
+        the program exits.
+  - ( ) It exits the program at this point, first calling the 'print_mem_info()'
+        function before termination.
+  - ( ) It registers 'malloc()' to be called when the 'print_mem_info()'
+        function exits (returns).
+  - ( ) Trick question: There is no use of 'atexit()' in the code for
+        'malloc()'.
+
+
+CODE: Complete 'my_lib.c'
+=========================
+
+  Complete the implementation of the 'free()' function based on the
+  instructions given in the comments of 'my_lib.c'.
+
+  Note that you do *not* need to worry about using 'atexit()' or
+  the 'print_mem_info()' in this code.
+
+QUIZ: Running 'input_list'
+==========================
+
+  The 'input_list' program reads in a sequence of numbers from the
+  user, stores these as nodes in a linked list, and then prints out
+  all previously input numbers at the end.
+
+  An example run of this program might look like:
+
+  ,------
+  | > make
+  | gcc -Wall -Werror -g -Og -c list.c
+  | gcc -Wall -Werror -g -Og -o input_list input_list.c list.o
+  | gcc -Wall -Werror -g -Og -shared -fpic -o my_lib.so my_lib.c -ldl
+  | >  ./input_list
+  | Type in a sequence of positive numbers.
+  | Type in 0 or a negative number to quit.
+  | Next Number? > 4
+  | Next Number? > 8
+  | Next Number? > 15
+  | Next Number? > 16
+  | Next Number? > 23
+  | Next Number? > 42
+  | Next Number? > 0
+  | The numbers you typed in were:
+  | 4
+  | 8
+  | 15
+  | 16
+  | 23
+  | 42
+  `------
+
+  Next, try running the program again, this time setting up our custom
+  library definitions for 'malloc()' and 'free()' to take effect. This
+  involves special command-line syntax for running the program:
+
+  ,------
+  | > LD_PRELOAD=./my_lib.so ./input_list
+  `------
+
+  What do you observe about the total number of calls to 'malloc()'
+  and to 'free()', as reported at the end of the program's execution?
+  - ( ) The number of calls to 'malloc()' is greater than the number of
+        calls to 'free()'.
+  - ( ) The number of calls to 'malloc()' is less than the number of
+        calls to 'free()'.
+  - ( ) The number of calls to 'malloc()' is equal to the number of
+        calls to 'free()'.
+
+CODE: Fix 'list.c'
+==================
+
+  The result you identified in the previous quiz question means there is a
+  problem somewhere in the memory management logic for the 'input_list'
+  program.
+
+  Take a look at the 'list_free()' function in the 'list.c' file. Identify
+  the bug and fix it.
+
+QUIZ: Running 'input_list'
+==========================
+
+  Now, once again run the 'input_list' program, using our custom versions
+  of 'malloc()' and 'free()' in lieu of the standard versions.
+
+  ,------
+  | > LD_PRELOAD=./my_lib.so ./input_list
+  `------
+
+  What do you observe about the total number of calls to 'malloc()'
+  and to 'free()', as reported at the end of the program's execution?
+  - ( ) The number of calls to 'malloc()' is greater than the number of
+        calls to 'free()'.
+  - ( ) The number of calls to 'malloc()' is less than the number of
+        calls to 'free()'.
+  - ( ) The number of calls to 'malloc()' is equal to the number of
+        calls to 'free()'.
+
+
+  Unfortunately, there aren't any more memory bugs to fix for 'input_list',
+  so you are done once you've arrived at this (imperfect) point. What do you
+  think is responsible for the remaining issue?
+
+  Once you've reached this point, you're ready to test your code and quiz:
+
+  ,----
+  > make test
+  `----
+
+  As always, once all tests are passing, assemble a zip file suitable for
+  submission to Gradescope with
+
+  ,----
+  > make zip
+  `----

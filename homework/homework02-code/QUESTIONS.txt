@@ -1,0 +1,208 @@
+			   __________________
+
+			    HW 02 QUESTIONS
+			   __________________
+
+PROBLEM 1 'age.c'
+=================
+
+A
+~
+
+  Examine the source code for 'age.c'. Compile it using the following
+  invocation of 'gcc'
+  ,----
+  | gcc age.c
+  `----
+  This should create the executable 'a.out'. Run this program using the
+  invocation.
+  ,----
+  | ./a.out
+  `----
+  Perform several runs of the program with the following values and
+  paste your output in the space below.
+  - Enter 16
+  - Enter 18
+  - Enter 25
+  - Enter 44
+  [Output]
+  - You are 8409600 minutes old.
+    You're too young to do anything fun.
+  - You are 9460800 minutes old.
+    You can vote but cannot (legally) imbibe alcohol.
+  - You are 13140000 minutes old.
+    You may imbibe alcohol but cannot be president.
+  - You are 23126400 minutes old.
+    You may imbibe alcohol but cannot be president
+
+B
+~
+
+  Analyze the code for 'age.c' and describe a flaw in the conditional
+  structure towards the end that prevents the output:
+  ,----
+  | You can vote, drink, and be president.
+  `----
+  from being printed.
+
+  Alter the code to fix this bug so that for ages 35 and larger, the
+  above text is printed. Paste your fixed code for the conditional below
+  and test it by recompiling and showing a demo run.
+
+  int main(void) {
+    int age_years = 0;
+    printf("Enter your age in years:\n");
+    scanf("%d", &age_years);
+    int age_minutes = age_years * 365 * 24 * 60;
+    printf("You are %d minutes old.\n", age_minutes);
+
+    if (age_years < 18) {
+        printf("You're too young to do anything fun.\n");
+    } else if (age_years >= 18 && age_years < 21) {
+        printf("You can vote but cannot (legally) imbibe alcohol.\n");
+    } else if (age_years >= 21 && age_years < 35) {
+        printf("You may imbibe alcohol but cannot be president.\n");
+    } else {    // does this print?
+        printf("You can vote, drink, and be president.\n");
+    }
+
+    return 0;
+  }
+  - root@37e874238229:/workspaces/csci2021-sp25/homework/homework02-code# gcc age.c
+    root@37e874238229:/workspaces/csci2021-sp25/homework/homework02-code# ./a.out
+    Enter your age in years:
+    35
+    You are 18396000 minutes old.
+    You can vote, drink, and be president.
+
+C
+~
+
+  Attempt to enter some absurd ages for the age computation.
+  - Enter 5000
+  - Enter -5000
+  Describe anything strange that seems to be happening based your
+  understanding of how basic arithmetic is supposed to work.
+  - If i put '5000', it needs to show positive number of minutes old.
+    However, it shows reverse. For '5000', it shows negative, and for '-5000', it shows positive.
+  If you happen to know WHY this strangeness is happening, describe it
+  below. If not, you will find out soon.
+  - I personally think that because of 'int age_years'.
+    I think it needs to be 'long age_years' to cover the '5000' and '-5000'.
+
+
+D
+~
+
+  Describe which function is used to print information to the screen.
+  Describe how it seems to work to substitute values into output and
+  what *format specifier* indicates an integer should be substituted.
+  - They used printf() to print information to the screen and
+    for the *format specifier*, they use %d which helps to print decimal number.
+
+E
+~
+
+  Describe what function is used to read typed input interactively from
+  a user in the 'age.c' program.  Describe how its arguments differ from those
+  for the arguments for printing to the screen earlier. Why is this difference
+  necessary?
+  - They used scanf().
+    first arguments: scanf() -> format specifier for the data will be insert.
+                     printf() -> format specifier for string that they will print out.
+    second arguments: scanf() -> adress of varieble that will going to save
+                      printf() -> the output they will print out.
+
+
+PROBLEM 2: Memory in diagram.c
+==============================
+
+  For each of the C blocks below, give a memory diagram of the block
+  indicating memory locations and contents of cells. These blocks appear
+  in the file 'diagram.c' which you can modify to print results if you
+  want to verify your answers.
+
+  Make sure to accurately express the standard sizes for each of the
+  kinds of variables on a 64-bit machine in your diagrams by placing
+  them at appropriate memory addresses that are tightly packed. A
+  reminder: on 64-bit machines, all pointers are 64 bits / 8 bytes.
+
+
+A
+~
+
+  ,----
+  |   // BLOCK A
+  |   int a = 5;
+  |   int b = 7;
+  |   double x = 4.5;
+  |   int *ip = &a;
+  |   ip = &b;
+  |   int c = *ip;
+  |   *ip = 19;
+  `----
+
+  ,----
+  | | ADDR  | SYMBOL | VAL |
+  | |-------+--------+-----|
+  | | #1048 | a      |  5  |
+  | | #1044 | b      |  19 |
+  | | #1040 | x      | 4.5 |
+  | | #1032 | ip     |#1044|
+  | | #1024 | c      |  7  |
+  `----
+
+
+B
+~
+
+  ,----
+  |   // BLOCK B
+  |   int arr[4] = {12, 14, 16, 18};
+  |   int *arp = arr;
+  |   int brr = 11;
+  |   arr[1] = 23;
+  |   arp[3] = 29;
+  |   arp = &arr[2];
+  |   *arp = brr;
+  `----
+
+  ,----
+  | | ADDR  | SYMBOL | VAL |
+  | |-------+--------+-----|
+  | | #2024 | arr[3] |  29 |
+  | | #2020 | arr[2] |  11 |
+  | | #2016 | arr[1] |  23 |
+  | | #2012 | arr[0] |  12 |
+  | | #2008 |  arp   |#2020|
+  | | #2000 |  brr   |  11 |
+  `----
+
+
+C
+~
+
+  ,----
+  |   // BLOCK C
+  |   char str[8] = "hello";
+  |   str[5] = 'w';
+  |   char *cp = str + 6;
+  |   *cp = '\0';
+  |   str[0] = 'y';
+  `----
+
+  ,----
+  |
+  | | ADDR  | SYMBOL | VAL |
+  | |-------+--------+-----|
+  | | #3107 | str[7] | \0  |
+  | | #3106 | str[6] | \0  |
+  | | #3105 | str[5] | w   |
+  | | #3104 | str[4] | o   |
+  | | #3103 | str[3] | l   |
+  | | #3102 | str[2] | l   |
+  | | #3101 | str[1] | e   |
+  | | #3100 | str[0] | y   |
+  | | #3092 |     cp |#3106|
+  |
+  `----

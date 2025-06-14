@@ -1,0 +1,3 @@
+results> read_bin Pogopalooza.bin
+results> print
+results> exit

@@ -1,0 +1,7 @@
+================================================================================================================================================================================================================
+== Test 3: Bitwise Puzzle
+== Checks output of the bit puzzle program for correctness
+Running test...
+Expected output is in file 'test_results/raw/lab_04-3-expected.tmp'
+Actual output is in file 'test_results/raw/lab_04-3-actual.tmp'
+Test PASSED

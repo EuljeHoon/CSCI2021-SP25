@@ -1,0 +1,18 @@
+Type in a sequence of positive numbers.
+Type in 0 or a negative number to quit.
+Next Number? > 4
+Next Number? > 8
+Next Number? > 15
+Next Number? > 16
+Next Number? > 23
+Next Number? > 42
+Next Number? > 0
+The numbers you typed in were:
+4
+8
+15
+16
+23
+42
+Total calls to malloc(): 8
+Total calls to free(): 6

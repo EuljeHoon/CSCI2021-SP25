@@ -1,0 +1,3 @@
+results> create BerlinMarathon
+results> add Eliud 37 2:01:09
+results> exit

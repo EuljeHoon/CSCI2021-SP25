@@ -1,0 +1,6 @@
+results> read_text RubiksCubeChallenge.txt
+results> write_bin
+results> clear
+results> read_bin RubiksCubeChallenge.bin
+results> print
+results> exit

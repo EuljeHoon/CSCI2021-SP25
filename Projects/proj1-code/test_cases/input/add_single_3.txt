@@ -1,0 +1,3 @@
+results> create Goldy200m
+results> add Allyson 27 0:00:22
+results> exit

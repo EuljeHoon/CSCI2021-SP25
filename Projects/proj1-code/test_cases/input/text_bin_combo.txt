@@ -1,0 +1,26 @@
+results> create WesternStates
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> print
+results> write_text
+results> create PreaknessStakes
+results> clear
+results> create PreaknessStakes
+results> add Secretariat 4 0:02:31
+results> add Justify 4 0:02:33
+results> add Codex 3 0:02:44
+results> add Affirmed 4 0:02:40
+results> add Victorian 4 0:02:50
+results> print
+results> write_bin
+results> clear
+results> read_text WesternStates.txt
+results> print
+results> clear
+results> read_bin PreaknessStakes.bin
+results> log
+results> print
+results> exit

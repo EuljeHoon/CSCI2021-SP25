@@ -1,0 +1,2 @@
+results> read_bin non_existent.bin
+results> exit

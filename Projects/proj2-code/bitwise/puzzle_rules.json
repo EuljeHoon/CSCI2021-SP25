@@ -1,0 +1,326 @@
+{
+    "absVal": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 10,
+        "is_floating_point": false,
+        "rating": 4
+    },
+    "addOK": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 20,
+        "is_floating_point": false,
+        "rating": 3
+    },
+    "bitNor": {
+        "allowed_binary_operators": [
+            "&",
+            "&="
+        ],
+        "allowed_unary_operators": [
+            "~"
+        ],
+        "allowed_total_ops": 8,
+        "is_floating_point": false,
+        "rating": 1
+    },
+    "copyLSB": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 5,
+        "is_floating_point": false,
+        "rating": 2
+    },
+    "distinctNegation": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 5,
+        "is_floating_point": false,
+        "rating": 2
+    },
+    "floatAbsVal": {
+        "allowed_binary_operators": [
+            "*",
+            "/",
+            "%",
+            "+",
+            "-",
+            "<<",
+            ">>",
+            "<",
+            ">",
+            "<=",
+            ">=",
+            "==",
+            "!=",
+            "&",
+            "^",
+            "|",
+            "&&",
+            "||",
+            "=",
+            "*=",
+            "/=",
+            "%=",
+            "+=",
+            "-=",
+            "<<=",
+            ">>=",
+            "&=",
+            "^=",
+            "|="
+        ],
+        "allowed_unary_operators": [
+            "++",
+            "--",
+            "+",
+            "-",
+            "~",
+            "!"
+        ],
+        "allowed_total_ops": 10,
+        "is_floating_point": true,
+        "rating": 2
+    },
+    "floatFloat2Int": {
+        "allowed_binary_operators": [
+            "*",
+            "/",
+            "%",
+            "+",
+            "-",
+            "<<",
+            ">>",
+            "<",
+            ">",
+            "<=",
+            ">=",
+            "==",
+            "!=",
+            "&",
+            "^",
+            "|",
+            "&&",
+            "||",
+            "=",
+            "*=",
+            "/=",
+            "%=",
+            "+=",
+            "-=",
+            "<<=",
+            ">>=",
+            "&=",
+            "^=",
+            "|="
+        ],
+        "allowed_unary_operators": [
+            "++",
+            "--",
+            "+",
+            "-",
+            "~",
+            "!"
+        ],
+        "allowed_total_ops": 30,
+        "is_floating_point": true,
+        "rating": 4
+    },
+    "floatIsLess": {
+        "allowed_binary_operators": [
+            "*",
+            "/",
+            "%",
+            "+",
+            "-",
+            "<<",
+            ">>",
+            "<",
+            ">",
+            "<=",
+            ">=",
+            "==",
+            "!=",
+            "&",
+            "^",
+            "|",
+            "&&",
+            "||",
+            "=",
+            "*=",
+            "/=",
+            "%=",
+            "+=",
+            "-=",
+            "<<=",
+            ">>=",
+            "&=",
+            "^=",
+            "|="
+        ],
+        "allowed_unary_operators": [
+            "++",
+            "--",
+            "+",
+            "-",
+            "~",
+            "!"
+        ],
+        "allowed_total_ops": 30,
+        "is_floating_point": true,
+        "rating": 3
+    },
+    "isAsciiDigit": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 15,
+        "is_floating_point": false,
+        "rating": 3
+    },
+    "isGreater": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 24,
+        "is_floating_point": false,
+        "rating": 3
+    },
+    "isZero": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 2,
+        "is_floating_point": false,
+        "rating": 1
+    },
+    "leastBitPos": {
+        "allowed_binary_operators": [
+            "&",
+            "&=",
+            "^",
+            "^=",
+            "|",
+            "|=",
+            "+",
+            "+=",
+            ">>",
+            ">>=",
+            "<<",
+            "<<="
+        ],
+        "allowed_unary_operators": [
+            "!",
+            "~"
+        ],
+        "allowed_total_ops": 6,
+        "is_floating_point": false,
+        "rating": 2
+    }
+}

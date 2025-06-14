@@ -1,0 +1,5 @@
+results> create GoldysDecathlon
+results> add Paula 40 2:12:13
+results> add Pre 22 0:13:09
+results> add Allyson 27 0:00:10
+results> exit

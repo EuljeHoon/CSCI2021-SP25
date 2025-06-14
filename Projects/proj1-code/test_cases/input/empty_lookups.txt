@@ -1,0 +1,6 @@
+results> create Goldy5K
+results> lookup Eliud
+results> lookup Paula
+results> lookup Kelvin
+results> lookup Peres
+results> exit

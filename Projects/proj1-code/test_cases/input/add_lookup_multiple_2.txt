@@ -1,0 +1,15 @@
+results> create Leadville100 
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> lookup Spyridon
+results> lookup Eliud
+results> lookup Jacquie
+results> lookup Lucie
+results> lookup Scott
+results> lookup Kelvin
+results> lookup JP
+results> lookup Ry
+results> exit

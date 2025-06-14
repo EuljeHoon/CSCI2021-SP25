@@ -1,0 +1,13 @@
+results> create WesternStates
+results> add JP 29 17:07:25
+results> add Ry 38 18:38:13
+results> add Jacquie 38 21:24:55
+results> add Lucie 29 23:16:51
+results> add Spyridon 29 21:21:55
+results> print
+results> write_bin
+results> clear
+results> log 
+results> read_bin WesternStates.bin
+results> print
+results> exit

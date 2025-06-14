@@ -1,0 +1,7 @@
+Next Number? > 4
+Next Number? > 8
+Next Number? > 15
+Next Number? > 16
+Next Number? > 23
+Next Number? > 42
+Next Number? > 0
